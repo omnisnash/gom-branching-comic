@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial, Tahoma, Serif, serif;
+}
+
+.credit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    text-align: center;
+    padding: 4px;
+    font-size: 0.7em;
+    color: #5e5e5e;
+    opacity: 0.5;
+    background: white;
+}
+
+.credit:hover {
+    opacity: 1;
+}
+
+.credit a{
+    color: #2661ff;
+    text-decoration: none;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+#image-view {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: rgba(0, 0, 0, 0.17) 0 -23px 25px 0 inset, rgba(0, 0, 0, 0.15) 0 -36px 30px 0 inset, rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset, rgba(0, 0, 0, 0.06) 0 2px 1px, rgba(0, 0, 0, 0.09) 0 4px 2px, rgba(0, 0, 0, 0.09) 0 8px 4px, rgba(0, 0, 0, 0.09) 0 16px 8px, rgba(0, 0, 0, 0.09) 0 32px 16px;
+
+}
+
+#image-view:before
+{
+    display:block;
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    -moz-box-shadow:inset 0 0 3px 1px rgba(0,0,0,1);
+    -webkit-box-shadow:inset 0 0 3px 1px rgba(0,0,0,1);
+    box-shadow:inset 0 0 3px 1px rgba(0,0,0,1);
+}
+
+.interaction {
+    border: 8px solid rgba(255, 255, 204, 0.38);
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-position: 1000px 1000px;
+    background-repeat: no-repeat;
+}
+
+.interaction.hidden {
+    border: 8px solid rgba(255, 255, 226, 0.38);
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-position: 1000px 1000px;
+    background-repeat: no-repeat;
+}
+
+
+.interaction:hover, .interaction:active {
+    border: 8px #313131 groove;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes fadeOut{
+    0% {
+        opacity: 100;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes n-exit{
+    0% {}
+    100% {
+        transform:  translate(0, -50vw);
+    }
+}
+@keyframes n-enter{
+    0% {
+        transform:  translate(0, +50vw)
+    }
+    100% {
+        transform:  translate(0, 0)
+    }
+}
+
+
+@keyframes ne-exit{
+    0% {}
+    100% {
+        transform:  translate(-50vw, +50vw);
+    }
+}
+@keyframes ne-enter{
+    0% {
+        transform:  translate(+50vw, -50vw)
+    }
+    100% {
+        transform:  translate(0, 0)
+    }
+}
+
+@keyframes e-exit{
+    0% {}
+    100% {
+        transform:  translate(-50vw, +0vw);
+    }
+}
+@keyframes e-enter{
+    0% {
+        transform:  translate(+50vw, -0vw)
+    }
+    100% {
+        transform:  translate(0, 0)
+    }
+}
+
+@keyframes se-exit{
+    0% {}
+    100% {
+        transform:  translate(-50vw, -50vw);
+    }
+}
+@keyframes se-enter{
+    0% {
+        transform:  translate(+50vw, +50vw)
+    }
+    100% {
+        transform:  translate(0, 0)
+    }
+}
+
+@keyframes s-exit{
+    0% {}
+    100% {
+        transform:  translate(-0vw, -50vw);
+    }
+}
+@keyframes s-enter{
+    0% {
+        transform:  translate(+0vw, +50vw)
+    }
+    100% {
+        transform:  translate(0, 0)
+    }
+}
+
+@keyframes sw-exit{
+    0% {}
+    100% {
+        transform:  translate(+50vw, -50vw);
+    }
+}
+@keyframes sw-enter{
+    0% {
+        transform:  translate(-50vw, +50vw)
+    }
+    100% {
+        transform:  translate(0, 0)
+    }
+}
+
+@keyframes w-exit{
+    0% {}
+    100% {
+        transform:  translate(+50vw, -0vw);
+    }
+}
+@keyframes w-enter{
+    0% {
+        transform:  translate(-50vw, +0vw)
+    }
+    100% {
+        transform:  translate(0, 0)
+    }
+}
+
+@keyframes nw-exit{
+    0% {}
+    100% {
+        transform:  translate(+50vw, +50vw);
+    }
+}
+@keyframes nw-enter{
+    0% {
+        transform:  translate(-50vw, -50vw)
+    }
+    100% {
+        transform:  translate(0, 0)
+    }
+}
+
+@keyframes none-exit{}
+@keyframes none-enter{}
